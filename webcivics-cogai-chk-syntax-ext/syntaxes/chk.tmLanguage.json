@@ -1,0 +1,382 @@
+{
+	"scopeName": "source.chk",
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "W3C-CG-CogAI",
+	
+	"patterns": [
+			{
+				"name": "comment.line.double-slash.chk",
+				"begin": "//",
+				"end": "$",
+				"captures": {
+					"0": {
+						"name": "punctuation.definition.comment.chk"
+					}
+				}
+			},
+			{
+				"name": "comment.block.chk",
+				"begin": "/\\*",
+				"end": "\\*/",
+				"captures": {
+					"0": {
+						"name": "punctuation.definition.comment.begin.chk"
+					},
+					"1": {
+						"name": "punctuation.definition.comment.end.chk"
+					}
+				}
+			},
+			{
+				"name": "string.quoted.double.chk",
+				"begin": "\"",
+				"end": "\"",
+				"beginCaptures": {
+					"0": {
+						"name": "punctuation.definition.string.begin.chk"
+					}
+				},
+				"endCaptures": {
+					"0": {
+						"name": "punctuation.definition.string.end.chk"
+					}
+				},
+				"patterns": [
+					{
+						"name": "constant.character.escape.chk",
+						"match": "\\\\."
+					}
+				]
+			},
+			{
+				"name": "string.quoted.single.chk",
+				"begin": "'",
+				"end": "'",
+				"beginCaptures": {
+					"0": {
+						"name": "punctuation.definition.string.begin.chk"
+					}
+				},
+				"endCaptures": {
+					"0": {
+						"name": "punctuation.definition.string.end.chk"
+					}
+				},
+				"patterns": [
+					{
+						"name": "constant.character.escape.chk",
+						"match": "\\\\."
+					}
+				]
+			},
+			{
+				"name": "constant.numeric.chk",
+				"match": "\\b\\d+(\\.\\d+)?\\b"
+			},
+			{
+				"name": "constant.language.boolean.chk",
+				"match": "\\b(true|false)\\b"
+			},
+			{
+				"name": "constant.language.null.chk",
+				"match": "\\bnull\\b"
+			},
+			{
+				"name": "keyword.operator.chk",
+				"match": "\\b(and|or|not)\\b"
+			},
+			{
+				"name": "keyword.control.chk",
+				"match": "\\b(if|else|for|in|while|break|continue|return|throw|try|catch|finally|switch|case|default|do|import|export|as|from|with|yield|await|async|of)\\b",
+				"captures": {
+					"1": {
+						"name": "keyword.control.flow.chk"
+					}
+				}
+			},
+			{
+				"name": "keyword.other.chk",
+				"match": "\\b(abstract|as|assert|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|false|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|true|try|typeof|var|void|while|with|yield)\\b"
+			},
+			{
+				"name": "storage.type.chk",
+				"match": "\\b(boolean|byte|char|double|float|int|long|short|void)\\b"
+			},
+			{
+				"name": "storage.modifier.chk",
+				"match": "\\b(abstract|const|export|final|native|private|protected|public|static|synchronized|transient|volatile)\\b"
+			},
+			{
+				"name": "entity.name.function.chk",
+				"match": "\\b(\\w+)\\s*\\("
+			},
+			{
+				"name": "entity.name.class.chk",
+				"match": "\\b(class|interface|enum)\\s+(\\w+)"
+			},
+			{
+				"name": "entity.name.type.chk",
+				"match": "\\b(new)\\s+(\\w+)"
+			},
+			{
+				"name": "entity.name.variable.chk",
+				"match": "\\b(var|let|const)\\s+(\\w+)"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*:"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\{"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\["
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\("
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\."
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\,"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\;"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\+"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\-"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\*"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\/"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\%"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\&"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\|"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\^"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\~"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\<"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\>"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\!"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\?"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\:"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\+\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\-\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\*\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\/\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\%\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\&\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\|\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\^\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\~\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\<\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\>\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\!\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\?\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\:\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\+\\+"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\-\\-"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\<\\<"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\>\\>"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\<\\<\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\>\\>\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\<\\<\\<"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\>\\>\\>"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\<\\<\\<\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\>\\>\\>\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\&\\&"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\|\\|"
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\+\\+\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\-\\-\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\<\\<\\="
+			},
+			{
+				"name": "entity.name.tag.chk",
+				"match": "\\b(\\w+)\\s*\\>\\>\\="
+			},
+		
+		]
+
+	},
+
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.chk",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},		
+	{
+		// This is a comment
+		{
+			// This is a comment
+			// This is a comment
+			// This is a comment
+			// This is a comment
+		}
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+		// This is a comment
+	}
+
+}
+
+
+

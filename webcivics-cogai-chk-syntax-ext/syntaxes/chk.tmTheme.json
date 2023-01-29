@@ -1,0 +1,125 @@
+{
+    "tokenColors": [
+        {
+            "name": "Keywords",
+            "scope": "keyword",
+            "settings": {
+                "foreground": "#0000FF"
+            }
+        },
+        {
+            "name": "Strings",
+            "scope": "string",
+            "settings": {
+                "foreground": "#00FF00"
+            }
+        },
+        {
+            "name": "Comments",
+            "scope": "comment",
+            "settings": {
+                "foreground": "#FF0000"
+            }
+        },
+        {
+            "name": "Numbers",
+            "scope": "constant.numeric",
+            "settings": {
+                "foreground": "#FF00FF"
+            }
+        },
+        {
+            "name": "Operators",
+            "scope": "keyword.operator",
+            "settings": {
+                "foreground": "#FFFF00"
+            }
+        },
+        {
+            "name": "Preprocessor",
+            "scope": "keyword.control.import",
+            "settings": {
+                "foreground": "#00FFFF"
+            }
+        },
+        {
+            "name": "Types",
+            "scope": "storage.type",
+            "settings": {
+                "foreground": "#FF00FF"
+            }
+        },
+        {
+            "name": "Functions",
+            "scope": "entity.name.function",
+            "settings": {
+                "foreground": "#FF00FF"
+            }
+        },
+        {
+            "name": "Variables",
+            "scope": "variable",
+            "settings": {
+                "foreground": "#FF00FF"
+            }
+        },
+        {
+            "name": "Constants",
+            "scope": "constant",
+            "settings": {
+                "foreground": "#FF00FF"
+            }
+        },
+        {
+            "name": "Attributes",
+            "scope": "entity.other.attribute-name",
+            "settings": {
+                "foreground": "#FF00FF"
+            }
+        },
+        {
+            "name": "Tags",
+            "scope": "entity.name.tag",
+            "settings": {
+                "foreground": "#FF00FF"
+            }
+        },
+        {
+            "name": "Classes",
+            "scope": "entity.name.class",
+            "settings": {
+                "foreground": "#FF00FF"
+            }
+        },
+        {
+            "name": "Exceptions",
+            "scope": "support.type.exception",
+            "settings": {
+                "foreground": "#FF00FF"
+            }
+        },
+        {
+            "name": "Built-in Constants",
+            "scope": "support.constant",
+            "settings": {
+                "foreground": "#FF00FF"
+            }
+        },
+        {
+            "name": "Built-in Functions",
+            "scope": "support.function",
+            "settings": {
+                "foreground": "#FF00FF"
+            }
+        },
+        {
+            "name": "Built-in Types",
+            "scope": "support.type",
+            "settings": {
+                "foreground": "#FF00FF"
+            }
+        },
+        
+    ]
+}
+

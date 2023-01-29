@@ -1,0 +1,25 @@
+{
+  "name": "webcivics-cogai-chk-syntax-ext",
+  "displayName": "W3C-CogAI-CG .chk syntax highlighter.",
+  "description": "This extension provides syntax highlighting for the W3C CogAI CHK file format.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "chk",
+      "aliases": ["W3C-CG-CogAI", "chk"],
+      "extensions": [".chk"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "chk",
+      "scopeName": "source.chk",
+      "path": "./syntaxes/chk.tmLanguage.json"
+    }]
+  }
+}
